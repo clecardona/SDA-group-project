@@ -1,4 +1,4 @@
-package backend.file;
+package backend;
 
 public class ResponseFile {
     private String name;
@@ -6,7 +6,7 @@ public class ResponseFile {
     private String type;
     private long size;
 
-    public ResponseFile(String name, String url, String type, long size) {
+    public ResponseFile( String name, String url, String type, long size) {
         this.name = name;
         this.url = url;
         this.type = type;

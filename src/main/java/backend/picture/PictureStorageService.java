@@ -1,3 +1,4 @@
+/*
 package backend.file;
 
 import java.io.IOException;
@@ -10,7 +11,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 
 @Service
-    public class FileStorageService {
+    public class PictureStorageService {
 
         @Autowired
         private FileDBRepository fileDBRepository;
@@ -39,3 +40,4 @@ import org.springframework.web.multipart.MultipartFile;
 
 }
 
+*/

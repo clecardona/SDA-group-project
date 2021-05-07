@@ -1,4 +1,5 @@
-package backend.file;
+/*
+package backend.picture;
 import backend.user.User;
 
         import javax.persistence.*;
@@ -23,9 +24,8 @@ public class Picture {
     @Column(nullable = false)
     private String likes;
 
-
-    @OneToOne(targetEntity = User.class, cascade = CascadeType.ALL)
-    private User fileOwner;
+    @ManyToOne (targetEntity = User.class, cascade = CascadeType.ALL)
+    private User pictureOwner;
 
     @Lob
     private byte[] data;
@@ -44,14 +44,13 @@ public class Picture {
 
     //getters and setters
 
-    public User getFileOwner() {
-        return fileOwner;
+    public User getPictureOwner() {
+        return pictureOwner;
     }
 
-    public void setFileOwner(User fileOwner) {
-        this.fileOwner = fileOwner;
+    public void setPictureOwner(User pictureOwner) {
+        this.pictureOwner = pictureOwner;
     }
-
     public Long getId() {
         return id;
     }
@@ -92,3 +91,4 @@ public class Picture {
         this.likes = likes;
     }
 }
+*/

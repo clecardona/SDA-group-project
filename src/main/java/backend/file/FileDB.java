@@ -7,7 +7,7 @@ import javax.validation.constraints.NotBlank;
 
 @Entity
 @Table
-public class ProfilePicture {
+public class FileDB {
 
     //fields
     @Id
@@ -18,6 +18,10 @@ public class ProfilePicture {
     @NotBlank
     @Column(nullable = false)
     private String name;
+
+    @NotBlank
+    @Column(nullable = false)
+    private String fileDownloadUri;
 
     @NotBlank
     @Column(nullable = false)
@@ -38,8 +42,17 @@ public class ProfilePicture {
     public FileDB() {
     }
 
-    public ProfilePicture(@NotBlank String name, @NotBlank String type, byte[] data, String like) {
+    public String getFileDownloadUri() {
+        return fileDownloadUri;
+    }
+
+    public void setFileDownloadUri(String fileDownloadUri) {
+        this.fileDownloadUri = fileDownloadUri;
+    }
+
+    public FileDB(@NotBlank String name, @NotBlank String  fileDownloadUri, @NotBlank String type, byte[] data, String like) {
         this.name = name;
+        this.fileDownloadUri=fileDownloadUri;
         this.type = type;
         this.data = data;
         this.likes = like;

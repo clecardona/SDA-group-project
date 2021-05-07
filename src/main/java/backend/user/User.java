@@ -1,6 +1,7 @@
 package backend.user;
 
 import backend.file.FileDB;
+//import backend.picture.Picture;
 import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.*;
@@ -30,8 +31,9 @@ public class User {
 
     @OneToOne(mappedBy = "fileOwner",targetEntity= FileDB.class)
     private FileDB fileDB;
-
-    // Hibernate needs a default constructor to function
+    /*@OneToMany (mappedBy = "pictureOwner",targetEntity= Picture.class)
+    private Picture picture;
+*/
     public User() {}
 
     public User(@Email(message = "Invalid email address! Please provide a valid email address") @NotEmpty(message = "Please provide an email address") String email, @Length(min = 5, max = 100, message = "Password length most be between 5-100 characters") String password, @Length(min = 3, max = 100, message = "Name must be between 3-100 characters") String name) {
