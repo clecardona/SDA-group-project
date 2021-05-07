@@ -31,6 +31,7 @@ public class FileController {
     public ResponseEntity<ResponseMessage> uploadFile(@RequestParam("file") MultipartFile file) {
         String message = "";
         try {
+            FileStorageService.saveImage(file);
             storageService.store(file);
 
             message = "Uploaded the file successfully: " + file.getOriginalFilename();
