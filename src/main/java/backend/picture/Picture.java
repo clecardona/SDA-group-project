@@ -1,14 +1,11 @@
 package backend.file;
-
 import backend.user.User;
 
-import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
+        import javax.persistence.*;
+        import javax.validation.constraints.NotBlank;
 
 @Entity
-@Table
-public class ProfilePicture {
-
+public class Picture {
     //fields
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -35,10 +32,10 @@ public class ProfilePicture {
 
     //constructors
 
-    public FileDB() {
+    public Picture() {
     }
 
-    public ProfilePicture(@NotBlank String name, @NotBlank String type, byte[] data, String like) {
+    public Picture(@NotBlank String name, @NotBlank String type, byte[] data, String like) {
         this.name = name;
         this.type = type;
         this.data = data;
@@ -95,6 +92,3 @@ public class ProfilePicture {
         this.likes = likes;
     }
 }
-
-
-
